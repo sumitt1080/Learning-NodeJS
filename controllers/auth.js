@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport(
   sendgridTransport({
     auth: {
       api_key:
-        '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'
+        'Your SendGrid API'
     }
   })
 );
@@ -209,7 +209,7 @@ exports.postReset = (req, res, next) => {
         res.redirect('/');
         transporter.sendMail({
           to: req.body.email,
-          from: 'cifojat197@vss6.com',
+          from: 'Your Sendgrid Single Sender mail',
           subject: 'Password reset',
           html: `
             <p>You requested a password reset</p>
